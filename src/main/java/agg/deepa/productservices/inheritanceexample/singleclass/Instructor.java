@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity(name = "st_instructor")
-@DiscriminatorValue(value = "2")
+@DiscriminatorValue(value = "instructor")
 public class Instructor extends User{
     private boolean isHandsome;
 }

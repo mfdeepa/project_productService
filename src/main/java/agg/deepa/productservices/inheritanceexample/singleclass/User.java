@@ -9,11 +9,11 @@ import lombok.Setter;
 @Entity(name="st_user")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(
-        name = "user_type",
-        discriminatorType =DiscriminatorType.INTEGER)
+        name = "dtype",
+        discriminatorType =DiscriminatorType.STRING)
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)   //it should be auto
     private Long id;
     private String email;
     private String password;
